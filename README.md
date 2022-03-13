@@ -1,4 +1,5 @@
-# Frontend Mentor - FAQ accordion card
+# Frontend Mentor - FAQ accordion card - by Ehab Nada
+## live server -> https://hopamnada.github.io/faq-accordion-card-main/
 
 ![Design preview for the FAQ accordion card coding challenge](./design/desktop-preview.jpg)
 

@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+:root {
+  /* Primary */
+  --p1: hsl(238, 29%, 16%);
+  --p2: hsl(14, 88%, 65%);
+
+  /* Gradient */
+  --g1: hsl(273, 75%, 66%);
+  --g2: hsl(240, 73%, 65%);
+
+  /* Neutral */
+  --n1: hsl(237, 12%, 33%);
+  --n2: hsl(240, 6%, 50%);
+
+  /* Dividers */
+
+  --d1: hsl(240, 5%, 91%);
+}
+
+body {
+  background: linear-gradient(var(--g1), var(--g2)) no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+.card {
+  width: 90vw;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.image .d-w,
+.image .d-bg {
+  display: none;
+}
+.image .m-w {
+  position: absolute;
+  width: 300px;
+  top: -140px;
+  left: calc((100% - 300px) / 2);
+}
+.text {
+  padding: 1.5rem;
+  line-height: 3;
+  width: 100%;
+}
+.text h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2em;
+}
+.text .question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.text .question p,
+.text .question .icon {
+  cursor: pointer;
+}
+.text .question .q:hover {
+  color: var(--p2);
+}
+.text .answer {
+  display: none;
+}
+.text .answer p {
+  color: var(--n2);
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+hr {
+  opacity: 20%;
+}
+.attribution {
+  font-size: 20px;
+  text-align: center;
+  margin: 5px 0;
+}
+.attribution a {
+  color: var(--p2);
+}
+
+@media screen and (min-width: 950px) {
+  .card {
+    flex-direction: row;
+    width: 70%;
+  }
+  .image {
+    min-width: 50%;
+    position: relative;
+    overflow: hidden;
+  }
+  .image .d-w,
+  .image .d-bg {
+    display: block;
+  }
+  .image .d-w {
+    position: relative;
+    display: block;
+    left: -16%;
+    z-index: 1;
+    width: 100%;
+    margin: 4rem 0;
+  }
+  .image .d-bg {
+    position: absolute;
+    display: block;
+    left: -79%;
+    bottom: -21%;
+    width: 160%;
+  }
+  .image .m-w,
+  .image .m-bg {
+    display: none;
+  }
+  .text {
+    margin-right: 5rem;
+    line-height: 3;
+  }
+  .text h1 {
+    text-align: left;
+    font-size: 3em;
+  }
+  .card::before {
+    content: "";
+    background-image: url("../images/illustration-box-desktop.svg");
+    background-repeat: no-repeat;
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    left: -9%;
+    top: 42%;
+    z-index: 2;
+    background-size: 60%;
+  }
+}

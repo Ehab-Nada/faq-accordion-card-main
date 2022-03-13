@@ -1,6 +1,10 @@
 let question = document.querySelectorAll(".q");
 let icon = document.querySelectorAll(".icon");
 
+window.onload = function () {
+  question[1].click();
+};
+
 question.forEach((e) => {
   e.addEventListener("click", function () {
     answer = e.parentElement.nextElementSibling;
